@@ -13,6 +13,8 @@ api = Api(app)
 class FirstEndpoint(Resource): # FirstEndpoint is the name of the endpoint. It is a resource.
     def get(self): # Here we tell the class that we are defining a get request at the specified endpoint.
         print("Getting Endpoint") # Showing that we are inside the get request, but in development, Flask will also show a line in the output.
+        # Anything you want python to do when the browser makes a request should be in this function.
+        # Anything you want returned to the browser should be done using the return() method as below.
         return("Hello, World!") # This will be returned to the browser
 
 # After the return, we attach the endpoint to a url location:
